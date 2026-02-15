@@ -10,11 +10,6 @@
  * CxImage version 7.0.2 07/Feb/2011
  */
 
-#ifndef NO_V2LINK
-#define NOMINMAX
-#include <windows.h>
-#endif
-
 #ifndef _WIN32
 typedef unsigned char BYTE;
 typedef unsigned short WORD;
