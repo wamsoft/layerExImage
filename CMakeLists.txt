@@ -6,4 +6,5 @@ krkrz_plugin(layerExImage
     SOURCES
         LayerExImage.cpp
         Main.cpp
+        LicensesGen.cpp
 )

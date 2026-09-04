@@ -1,13 +1,5 @@
 #include "ncbind.hpp"
 
-static const char *copyright = 
-"----- CxImage Copyright START -----\n"
-"CxImage version 7.0.2 07/Feb/2011\n"
-"CxImage : Copyright (C) 2001 - 2011, Davide Pizzolato\n"
-"Original CImage and CImageIterator implementation are:\n"
-"Copyright (C) 1995, Alejandro Aguilar Sierra (asierra(at)servidor(dot)unam(dot)mx)\n"
-"----- CxImage Copyright END -----\n";
-
 typedef unsigned char BYTE;
 typedef unsigned short WORD;
 
@@ -44,9 +36,7 @@ NCB_ATTACH_CLASS_WITH_HOOK(layerExImage, Layer) {
 	NCB_METHOD(gaussianBlur);
 }
 
-void init()
-{
-	TVPAddImportantLog(ttstr(copyright));
-}
-
-NCB_PRE_REGIST_CALLBACK(init);
+// 同梱コンポーネント (CxImage) のライセンスを本体収集機構へ登録
+// (LicensesGen.cpp = licenses/manifest.json から生成)
+extern void RegisterLayerExImageLicenses();
+NCB_PRE_REGIST_CALLBACK(RegisterLayerExImageLicenses);
